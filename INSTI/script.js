@@ -1,18 +1,20 @@
 var typed = new Typed(".texto-animado", {
-    strings: ["Descubre el mundo, vive experiencia inolvidables"],
+    strings: ["Descubre el mundo y vive experiencias inolvidables"],
     typeSpeed: 80,
     backSpeed: 50,
     backDelay: 5000,
     loop: false
 })
 
-var typed = new Typed("#searchInput", {
-    strings: ["A donde quieres ir?"],
-    typeSpeed: 40,
-    backSpeed: 110,
-    backDelay: 6000,
-    loop: true
+var typed = new Typed(".animation", {
+    strings: ["A donde quieres viajar?"],
+    typeSpeed: 80,
+    backSpeed: 50,
+    backDelay: 5000,
+    loop: false
 })
+
+
 
 function toggleMenu() {
     var dropdownMenu = document.getElementById("myDropdown");
@@ -33,3 +35,17 @@ window.onclick = function(event) {
 }
 
 
+function clearPlaceholder() {
+    document.getElementById("placeholder").placeholder = "";
+}
+
+function restorePlaceholder() {
+    document.getElementById("placeholdert").placeholder = "A donde quieres viajar?";
+}
+
+function searchHotels() {
+    var searchInput = document.getElementById("placeholder").value;
+    if (searchInput.trim() !== "") {
+        window.location.href = "hoteles.html";
+    }
+}

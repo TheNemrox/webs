@@ -5,10 +5,10 @@
     --color-3: #9e8d77;
     --color-4: #583d34;
     --color-5: #1f1b17;
-    --color-6: #012d674b;
-    --color-7: #9cacbf;
+    --color-6: rgba(47, 50, 56, 0.37);
+    --color-7: #b0b0b0;
     --color-8: #2b6684;
-    --color-9: #032e42;
+    --color-9: #2e424b;
     --color-10: #0a1417;
     
 }
@@ -56,12 +56,22 @@ header {
     align-items: center;
     justify-content: space-between;
     margin-top: 0%;
+    animation-name: header-animation;
+    animation-duration: 2s; 
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
 }
 
 img{
     background-color: transparent;
     color: transparent;
 }
+
+img:hover{
+    transform: scale(1.2);
+}
+
 
 .menu-icon {
     font-size: 30px;
@@ -87,6 +97,8 @@ img{
 
 .dropdown-menu a:hover {
     background-color: #55555587;
+    
+    
 }
 
 .logo{
@@ -143,6 +155,13 @@ img{
     font-size: 100px;
     height: 300px;
     margin-left: 150px;
+    top: 150px;
+    animation-name: text-animation;
+    animation-duration: 2s; 
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    position: relative;
 }
 
 
@@ -150,10 +169,17 @@ img{
     display: flex;
     align-items: center;
     background-color: var(--color-6);
-    border: 3px solid black;
-    border-radius: 10px;
+    border: 0px solid rgb(240, 221, 221);
+    border-radius: 15px;
     width: 470px;
     margin-left: 150px;
+    top: 115px;
+    animation-name: search-animation;
+    animation-duration: 7s; 
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    position: relative;
 }
 
 #searchInput {
@@ -174,27 +200,30 @@ img{
 }
 
 #lupa {
-    width: 50px;
+    width: 40px;
     margin: 0%;
     padding-left: 0%;
     padding-right: 0%;
-    position: relative;
-    top: 0px;
-    right: 0%;
+    position: absolute;
+    bottom: -19px;
+    right: 14px;
 }
 
 input {
-    background-color: #1f1b1700;
+    background-color: #ffffff00;
     color: var(--color-7);
-    width: 400px;
+    width: 700px;
     height: 35px;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 
 }
 
+input::target-text {
+    padding-left: 50px;
+}
 
 
 button{
@@ -213,4 +242,106 @@ img:hover{
     transform: scale(1.2);
 }
 
+/* Animacion del header */
 
+@keyframes header-animation {
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{ transform: translateY(0%)}
+}
+
+
+@-moz-keyframes header-animation{
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{ transform: translateY(0%)}
+}
+
+@-o-keyframes header-animation {0%{
+    transform: translateY(-100%);
+}
+
+100%{ transform: translateY(0%)}}
+
+@-ms-keyframes header-animation {0%{
+    transform: translateY(-100%);
+}
+
+100%{ transform: translateY(0%)}}
+
+
+
+/* Animacion del titulo (texto) */
+
+@keyframes text-animation {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{ transform: translateX(0%)}
+}
+
+
+@-moz-keyframes text-animation {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{ transform: translateX(0%)}
+}
+
+@-o-keyframes  text-animation {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{ transform: translateX(0%)}
+}
+
+@-ms-keyframes  text-animation {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{ transform: translateX(0%)}
+}
+
+
+
+/* Animacion de la barra de busqueda */
+
+@keyframes search-animation {
+    0%{
+        transform: translateX(-1000%);
+    }
+
+    100%{ transform: translateX(0%)}
+}
+
+@-moz-keyframes search-animation {
+    0%{
+        transform: translateX(-1000%);
+    }
+
+    100%{ transform: translateX(0%)}
+}
+
+@-o-keyframes search-animation {
+    0%{
+        transform: translateX(-1000%);
+    }
+
+    100%{ transform: translateX(0%)}
+}
+
+@-ms-keyframes search-animation {
+    0%{
+        transform: translateX(-1000%);
+    }
+
+    100%{ transform: translateX(0%)}
+}
